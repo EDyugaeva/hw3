@@ -45,9 +45,7 @@ public class Main {
         } else if (temp1 == 0 && temp2 != 0) {
             System.out.println("Год  является високосным");
         } else System.out.println("Год не является високосным");
-
     }
-
 
     public static void task4() {
         short deliveryDistance = 95;
@@ -58,8 +56,8 @@ public class Main {
             deliveryDay = 2;
         } else deliveryDay = 3;
         System.out.println("Потребуется дней: " + deliveryDay);
-
     }
+
     public static void task5() {
         byte monthNumber = 6;
         switch (monthNumber) {
@@ -87,7 +85,6 @@ public class Main {
                 System.out.println("Ошибка! Нет такого месяца");
         }
     }
-
 }
 
 
