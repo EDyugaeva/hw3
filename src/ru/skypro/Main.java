@@ -52,7 +52,7 @@ public class Main {
         short deliveryDay;
         if (deliveryDistance <= 20) {
             deliveryDay = 1;
-        } else if (deliveryDistance > 20 && deliveryDistance <= 60) {
+        } else if (deliveryDistance <= 60) {
             deliveryDay = 2;
         } else deliveryDay = 3;
         System.out.println("Потребуется дней: " + deliveryDay);
