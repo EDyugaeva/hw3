@@ -17,9 +17,7 @@ public class Main {
             System.out.println("Установите версию приложения для Android по ссылке ");
         } else if (clientOS == 0) {
             System.out.println("Установите версию приложения для iOS по ссылке");
-        } else {
-            System.out.println("Ошибка");
-        }
+        } else System.out.println("Ошибка");
     }
 
     public static void task2() {
@@ -34,21 +32,19 @@ public class Main {
             System.out.println("Установите облегченную версию приложения для Android по ссылке");
         } else if (apple && clientDeviceYear >= 2015) {
             System.out.println("Установите версию приложения для iOS по ссылке");
-        } else {
-            System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-        }
+        } else System.out.println("Установите облегченную версию приложения для iOS по ссылке");
     }
 
-
     public static void task3() {
-        float year = 2024f;
-        if (year % 4 == 0) {
+        short year = 2024;
+        byte temp1 = (byte) (year % 4);
+        byte temp2 = (byte) (year % 100);
+        byte temp3 = (byte) (year % 400);
+        if (temp3 == 0) {
             System.out.println("Год  является високосным");
-        } else if (year % 4 == 0 && year % 100 == 0) {
+        } else if (temp1 == 0 && temp2 != 0) {
             System.out.println("Год  является високосным");
-        } else {
-            System.out.println("Год не является високосным");
-        }
+        } else System.out.println("Год не является високосным");
     }
 
     public static void task4() {
@@ -58,10 +54,8 @@ public class Main {
             deliveryDay = 1;
         } else if (deliveryDistance <= 60) {
             deliveryDay = 2;
-        } else {
-            deliveryDay = 3;
-            System.out.println("Потребуется дней: " + deliveryDay);
-        }
+        } else deliveryDay = 3;
+        System.out.println("Потребуется дней: " + deliveryDay);
     }
 
     public static void task5() {
@@ -92,5 +86,3 @@ public class Main {
         }
     }
 }
-
-
