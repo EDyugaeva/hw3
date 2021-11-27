@@ -9,8 +9,8 @@ public class Main {
 //        task3();
 //        task4();
 //        task5();
-//        task6();
-        task7();
+        task6();
+//        task7();
     }
 
     public static void task1() {
@@ -111,17 +111,17 @@ public class Main {
         int limit;
         int limitAge;
         int limitSalary;
-        if (age >= 23) {
-            limitAge = 3 * salary;
-        } else {
+        if (age < 23) {
             limitAge = 2 * salary;
-        } // Определение лимита по возрасту+
+        } else {
+            limitAge = 3 * salary;
+        }
         if (salary >= 50_000) {
             limitSalary = (int) (1.2 * salary);
         } else if (salary >= 80_000) {
             limitSalary = (int) (1.5 * salary);
         } else {
-            limitSalary = salary;
+            limitSalary = 0;
         } // определение лимита по зарплате
         if (limitSalary > limitAge) {
             limit = limitSalary;
