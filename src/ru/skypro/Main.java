@@ -4,10 +4,10 @@ public class Main {
 
     public static void main(String[] args) {
         // write your code here
-        task1();
-        task2();
-        task3();
-        task4();
+//        task1();
+//        task2();
+//        task3();
+//        task4();
         task5();
     }
 
@@ -24,26 +24,38 @@ public class Main {
 
     public static void task2() {
         byte clientOS; //1 - Android, 0 - iOS
-        clientOS = 0;
-        boolean apple = clientOS == 0;
-        boolean android = clientOS == 1;
+        clientOS = 1;
+//        boolean apple = clientOS == 0;
+//        boolean android = clientOS == 1;
         short clientDeviceYear = 2014;
-        if (android && clientDeviceYear >= 2015) {
-            System.out.println("Установите версию приложения для Android по ссылке ");
-        } else if (android && clientDeviceYear < 2015) {
-            System.out.println("Установите облегченную версию приложения для Android по ссылке");
-        } else if (apple && clientDeviceYear >= 2015) {
-            System.out.println("Установите версию приложения для iOS по ссылке");
+//        if (android && clientDeviceYear >= 2015) {
+//            System.out.println("Установите версию приложения для Android по ссылке ");
+//        } else if (android && clientDeviceYear < 2015) {
+//            System.out.println("Установите облегченную версию приложения для Android по ссылке");
+//        } else if (apple && clientDeviceYear >= 2015) {
+//            System.out.println("Установите версию приложения для iOS по ссылке");
+//        } else {
+//            System.out.println("Установите облегченную версию приложения для iOS по ссылке");
+//        }
+        if (clientOS == 0) {
+            if (clientDeviceYear >= 2015) {
+                System.out.println("Установите версию приложения для iOS по ссылке");
+            } else {
+                System.out.println("Установите облегченную версию приложения для iOS по ссылке");
+            }
         } else {
-            System.out.println("Установите облегченную версию приложения для iOS по ссылке");
+            if (clientDeviceYear >= 2015) {
+                System.out.println("Установите версию приложения для Android по ссылке ");
+            } else {
+                System.out.println("Установите облегченную версию приложения для Android по ссылке");
+            }
         }
     }
 
+
     public static void task3() {
-        short year = 2024;
-        if (year % 400 == 0) {
-            System.out.println("Год  является високосным");
-        } else if (year % 4 == 0 && year % 100 != 0) {
+        short year = 100;
+        if ((year % 4 == 0 && year % 100 != 0)||(year % 400 == 0)) {
             System.out.println("Год  является високосным");
         } else {
             System.out.println("Год не является високосным");
