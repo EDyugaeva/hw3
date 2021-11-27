@@ -136,7 +136,7 @@ public class Main {
         int maxPayment = salary / 2;
         float rate = 10f;
         if (age < 23) {
-            rate++;
+            rate = rate + 1f;
         } else if (age < 30) {
             rate = rate + 0.5f;
         }
