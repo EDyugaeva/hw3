@@ -8,7 +8,9 @@ public class Main {
 //        task2();
 //        task3();
 //        task4();
-        task5();
+//        task5();
+//        task6();
+        task7();
     }
 
     public static void task1() {
@@ -55,7 +57,7 @@ public class Main {
 
     public static void task3() {
         short year = 100;
-        if ((year % 4 == 0 && year % 100 != 0)||(year % 400 == 0)) {
+        if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
             System.out.println("Год  является високосным");
         } else {
             System.out.println("Год не является високосным");
@@ -100,6 +102,53 @@ public class Main {
                 break;
             default:
                 System.out.println("Ошибка! Нет такого месяца");
+        }
+    }
+
+    public static void task6() {
+        int age = 18;
+        int salary = 1_000_000;
+        int limit;
+        int limitAge;
+        int limitSalary;
+        if (age >= 23) {
+            limitAge = 3 * salary;
+        } else {
+            limitAge = 2 * salary;
+        } // Определение лимита по возрасту+
+        if (salary >= 50_000) {
+            limitSalary = (int) (1.2 * salary);
+        } else if (salary >= 80_000) {
+            limitSalary = (int) (1.5 * salary);
+        } else {
+            limitSalary = salary;
+        } // определение лимита по зарплате
+        if (limitSalary > limitAge) {
+            limit = limitSalary;
+        } else limit = limitAge; //сравнение
+        System.out.println("Мы готовы выдать вам кредитную карту с лимитом " + limit);
+    }
+
+    public static void task7() {
+        int age = 25;
+        int salary = 60_000;
+        int wantedSum = 330_000;
+        int maxPayment = salary / 2;
+        float rate = 10f;
+        if (age < 23) {
+            rate++;
+        } else if (age < 30) {
+            rate = rate + 0.5f;
+        }
+        if (salary >= 80000) {
+            rate = rate - 0.7f;
+        }
+        float payment = (wantedSum * rate / 100 + wantedSum) / 12;
+        System.out.println("Максимальный платеж при ЗП " + salary + " равен " + maxPayment + " рублей. Платеж по кредиту " + payment + " рублей.");
+        if (payment <= maxPayment) {
+            System.out.println("Одобрено");
+        } else {
+            System.out.println("Отказано");
         }
     }
 }
